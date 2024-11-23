@@ -1,0 +1,11 @@
+package com.example.Mapamidi.repository;
+
+import com.example.Mapamidi.model.Department;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface DepartmentRepository extends JpaRepository<Department, Long> {
+
+    List<Department> findDepartmentByCountry_Id(long id);
+}
