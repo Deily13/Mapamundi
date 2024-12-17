@@ -17,13 +17,13 @@ public class Department {
 
     @Id
     @Column(name = "id_department", length = 6, nullable = false)
-    private long idDepartment;
-
-    @Column(name = "name", length = 255)
-    private String name;
+    private Long idDepartment;
 
     @ManyToOne
     @JoinColumn(name = "id_country", referencedColumnName = "id_country", nullable = false)
     @JsonIgnore
     private Country country;
+
+    @Column(name = "name", length = 255)
+    private String name;
 }

@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS Country (
+  id_country BIGINT NOT NULL PRIMARY KEY,
+  iso3 CHAR(3) NOT NULL UNIQUE,
+  country_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Department (
+  id_department BIGINT NOT NULL PRIMARY KEY,
+  id_country BIGINT NOT NULL,
+  name VARCHAR(255),
+  CONSTRAINT fk_country FOREIGN KEY (id_country) REFERENCES Country (id_country) ON DELETE CASCADE
+);

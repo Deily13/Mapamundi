@@ -7,4 +7,6 @@ import java.util.List;
 public interface DepartmentService {
 
     List<Department> findDepartmentByCountryId(Long countryId);
+
+    long countByCountryName(String countryName);
 }

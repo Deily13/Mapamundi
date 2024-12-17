@@ -8,4 +8,6 @@ import java.util.List;
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
 
     List<Department> findDepartmentByCountry_Id(long id);
+
+    long countByCountryName(String countryName);
 }
